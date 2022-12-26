@@ -12,7 +12,7 @@ int main()
     using namespace CryptoPP;
 	string digest;
     Weak::MD5 hash;
-    FileSource("1.txt", true, new HashFilter(hash, new HexEncoder(new StringSink (digest))));
+    FileSource("text.txt", true, new HashFilter(hash, new HexEncoder(new StringSink (digest))));
     cout<<"Hash: "<< digest << endl;
     return 0;
 }
